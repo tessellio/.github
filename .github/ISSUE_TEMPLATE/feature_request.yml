@@ -1,0 +1,37 @@
+name: Feature / proposal
+description: Propose a change to the codec, implementation, or tooling.
+title: "[proposal] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A specification change is a change to a contract between implementations that do not share an author.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Specification (tessellio)
+        - Rust core (tessellio-core)
+        - Browser (tessellio-ts)
+        - Wire schema (tessellio-proto)
+        - Conformance (tessellio-conformance)
+        - CLI / tooling
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / motivation
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Which implementations and the conformance corpus need to move with this?

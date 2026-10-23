@@ -1,0 +1,46 @@
+name: Bug report
+description: Something is wrong in a specification, implementation, or tool.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please fill in as much as you can.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Specification (tessellio)
+        - Rust core (tessellio-core)
+        - Browser (tessellio-ts)
+        - Wire schema (tessellio-proto)
+        - Conformance (tessellio-conformance)
+        - CLI / tooling
+        - Demo
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      render: shell
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
